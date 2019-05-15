@@ -1,0 +1,81 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul button {
+  display: none;
+}
+.navbar ul li {
+  list-style: none;
+  padding: 1em;
+  cursor: pointer;
+}
+.navbar ul li:hover {
+  background-color: #e7e7e7;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.menu::after {
+  content: "☰";
+}
+
+.close::after {
+  content: "X";
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  margin: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    padding: 0 !important;
+  }
+  ul button {
+    display: block !important;
+    background-color: #f7f7f7;
+    border: none;
+    outline: none;
+    font-size: 2em;
+    cursor: pointer;
+    width: 40px;
+    height: 55px;
+    align-self: flex-start;
+  }
+  ul button::after {
+    content: "X";
+  }
+  ul li {
+    margin: 0 !important;
+    display: none;
+  }
+  ul li a {
+    display: block;
+  }
+  ul li a:hover {
+    color: #333 !important;
+    background-color: #e7e7e7;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
